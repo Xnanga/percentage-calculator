@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percentage Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Percentage Calculator">
+        <meta name="keywords" content="percentage calculator">
+        <meta description="Use our handy and free percentage calculator to get the percentage of a number quickly and conveniently.">
+        <meta name="robots" content="index, follow">
+        <meta name="application-name" content="Percentage Calculator">
+        <link rel="stylesheet" href="./stylesheet.css">
+    </head>
+    <body>
+        <h1>Percentage Calculator</h1>
+        <div id="formBlockContainer">
+        <h2>What is X% of Y?</h2>
+        <form id="whatIsPercentOfForm" class="formBlock">
+            <p>What is</p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
+            <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p><button type="button" id="whatIsPercentOfFormSubmitButton">Submit</button>
+            <br><br><input type="text" id="whatIsPercentOfFormOutput">
+        </form>
+        <br>
+        <h2>X is what percent of Y?</h2>
+        <form id="xIsWhatPercentOfYForm" class="formBlock">
+            <input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
+            <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p><button type="button" id="xIsWhatPercentOfYFormSubmitButton">Submit</button>
+            <br><br><input type="text" id="xIsWhatPercentOfYFormOutput">
+        </form>
+        <br>
+        <h2>What is the percentage increase/decrease from X to Y?</h2>
+        <form id="percentIncreaseDecreaseForm" class="formBlock">
+            <p>What is the percentage increase/decrease from </p><input type="text" id="percentIncreaseDecreaseFormInputOne"><p> to </p>
+            <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p><button type="button" id="percentIncreaseDecreaseFormSubmitButton">Submit</button>
+            <br><br><input type="text" id="percentIncreaseDecreaseFormOutput">
+        </form>
+    </div>
+    <script src="./percentage-calculator.js">
+        </script>
+    </body>
+</html>
