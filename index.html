@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Percentage Calculator</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="title" content="Percentage Calculator">
         <meta name="keywords" content="percentage calculator">
         <meta description="Use our handy and free percentage calculator to get the percentage of a number quickly and conveniently.">
@@ -11,29 +11,28 @@
         <link rel="stylesheet" href="./stylesheet.css">
     </head>
     <body>
+        <br>
         <h1>Percentage Calculator</h1>
-        <div id="formBlockContainer">
-        <h2>What is X% of Y?</h2>
-        <form id="whatIsPercentOfForm" class="formBlock">
-            <p>What is</p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
-            <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p><button type="button" id="whatIsPercentOfFormSubmitButton">Submit</button>
-            <br><br><input type="text" id="whatIsPercentOfFormOutput">
-        </form>
-        <br>
-        <h2>X is what percent of Y?</h2>
-        <form id="xIsWhatPercentOfYForm" class="formBlock">
-            <input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
-            <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p><button type="button" id="xIsWhatPercentOfYFormSubmitButton">Submit</button>
-            <br><br><input type="text" id="xIsWhatPercentOfYFormOutput">
-        </form>
-        <br>
-        <h2>What is the percentage increase/decrease from X to Y?</h2>
-        <form id="percentIncreaseDecreaseForm" class="formBlock">
-            <p>What is the percentage increase/decrease from </p><input type="text" id="percentIncreaseDecreaseFormInputOne"><p> to </p>
-            <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p><button type="button" id="percentIncreaseDecreaseFormSubmitButton">Submit</button>
-            <br><br><input type="text" id="percentIncreaseDecreaseFormOutput">
-        </form>
-    </div>
+            <div id="formBlockContainer">
+                        <form id="whatIsPercentOfForm" class="formBlock">
+                            <div class="formStatement"><p>What is </p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
+                            <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="whatIsPercentOfFormSubmitButton">Submit</button>
+                            <input type="text" class="outputField" id="whatIsPercentOfFormOutput"></div>
+                        </form>
+                <br>
+                    <form id="xIsWhatPercentOfYForm" class="formBlock">
+                        <div class="formStatement"><input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
+                        <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="xIsWhatPercentOfYFormSubmitButton">Submit</button>
+                        <input type="text" class="outputField" id="xIsWhatPercentOfYFormOutput"></div>
+                    </form>
+                <br>
+                    <form id="percentIncreaseDecreaseForm" class="formBlock">
+                        <span><div class="formStatement"><p>What is the percentage increase / decrease </p>
+                        <p>from</p><input type="text" id="percentIncreaseDecreaseFormInputOne"><p> to </p>
+                        <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="percentIncreaseDecreaseFormSubmitButton">Submit</button>
+                        <input type="text" class="outputField" id="percentIncreaseDecreaseFormOutput"></div></span>
+                    </form>
+            </div>
     <script src="./percentage-calculator.js">
         </script>
     </body>
