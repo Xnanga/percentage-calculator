@@ -15,24 +15,26 @@
         <h1>Percentage Calculator</h1>
             <div id="formBlockContainer">
                         <form id="whatIsPercentOfForm" class="formBlock">
-                            <div class="formStatement"><p>What is </p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
-                            <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="whatIsPercentOfFormSubmitButton">Submit</button>
+                            <div id="fullFormOne" class="formStatement"><p>What is </p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
+                            <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="whatIsPercentOfFormSubmitButton">Calculate</button>
                             <input type="text" class="outputField" id="whatIsPercentOfFormOutput"></div>
                         </form>
                 <br>
                     <form id="xIsWhatPercentOfYForm" class="formBlock">
-                        <div class="formStatement"><input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
-                        <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="xIsWhatPercentOfYFormSubmitButton">Submit</button>
+                        <div id="fullFormTwo" class="formStatement"><input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
+                        <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="xIsWhatPercentOfYFormSubmitButton">Calculate</button>
                         <input type="text" class="outputField" id="xIsWhatPercentOfYFormOutput"></div>
                     </form>
                 <br>
                     <form id="percentIncreaseDecreaseForm" class="formBlock">
-                        <span><div class="formStatement"><p>What is the percentage increase / decrease </p>
+                        <span><div id="fullFormThree" class="formStatement"><p>What is the percentage increase / decrease </p>
                         <p>from</p><input type="text" id="percentIncreaseDecreaseFormInputOne"><p> to </p>
-                        <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="percentIncreaseDecreaseFormSubmitButton">Submit</button>
+                        <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="percentIncreaseDecreaseFormSubmitButton">Calculate</button>
                         <input type="text" class="outputField" id="percentIncreaseDecreaseFormOutput"></div></span>
                     </form>
-            </div>
+                    <br>
+                    <span id="creatorName">Created by <a href="https://github.com/Xnanga">Jamie Peutherer</a></span>
+        </div>
     <script src="./percentage-calculator.js">
         </script>
     </body>
