@@ -9,29 +9,37 @@
         <meta name="robots" content="index, follow">
         <meta name="application-name" content="Percentage Calculator">
         <link rel="stylesheet" href="./stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <br>
         <h1>Percentage Calculator</h1>
+        <p id="descriptionParagraph">A free online tool to make calculating percentages simple and easy.</p>
             <div id="formBlockContainer">
                         <form id="whatIsPercentOfForm" class="formBlock">
                             <div id="fullFormOne" class="formStatement"><p>What is </p><input type="text" id="whatIsPercentOfFormInputOne"><p>% of </p>
                             <input type="text" id="whatIsPercentOfFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="whatIsPercentOfFormSubmitButton">Calculate</button>
                             <input type="text" class="outputField" id="whatIsPercentOfFormOutput"></div>
+                            <p id="formOneErrorMessage" class="invalidInputMessageFalse">Invalid values in input field. Make sure you aren't submitting any letters or symbols.</p>
                         </form>
                 <br>
                     <form id="xIsWhatPercentOfYForm" class="formBlock">
                         <div id="fullFormTwo" class="formStatement"><input type="text" id="xIsWhatPercentOfYFormInputOne"><p> is what percent of </p>
                         <input type="text" id="xIsWhatPercentOfYFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="xIsWhatPercentOfYFormSubmitButton">Calculate</button>
                         <input type="text" class="outputField" id="xIsWhatPercentOfYFormOutput"></div>
+                        <p id="formTwoErrorMessage" class="invalidInputMessageFalse">Invalid values in input field. Make sure you aren't submitting any letters or symbols.</p>
                     </form>
                 <br>
                     <form id="percentIncreaseDecreaseForm" class="formBlock">
                         <span><div id="fullFormThree" class="formStatement"><p>What is the percentage increase / decrease </p>
                         <p>from</p><input type="text" id="percentIncreaseDecreaseFormInputOne"><p> to </p>
-                        <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p></div><div class="formStatementTwo"><button class="submitButton" type="button" id="percentIncreaseDecreaseFormSubmitButton">Calculate</button>
+                        <input type="text" id="percentIncreaseDecreaseFormInputTwo"><p>?</p></div><div id ="formThreeStatementTwo" class="formStatementTwo"><button class="submitButton" type="button" id="percentIncreaseDecreaseFormSubmitButton">Calculate</button>
                         <input type="text" class="outputField" id="percentIncreaseDecreaseFormOutput"></div></span>
+                        <p id="formThreeErrorMessage" class="invalidInputMessageFalse">Invalid values in input field. Make sure you aren't submitting any letters or symbols.</p>
                     </form>
+                    <br>
+                    <span id="proTipMessage"><b>Pro Tip</b>: Use tab to quickly move from field to field and press enter to calulate your answer.</span>
+                    <br>
                     <br>
                     <span id="creatorName">Created by <a href="https://github.com/Xnanga">Jamie Peutherer</a></span>
         </div>

@@ -8,18 +8,19 @@ let controller = {
     // Declares variables for both incoming arguments.
     let x = valueOne;
     let y = valueTwo;
+    let invalidInputMessage = document.getElementById("formOneErrorMessage");
 
     // Tests if either of the form submissions are valid numbers or not.
     if (isNaN(x) || isNaN(y)) {
 
         // Display an error message to the user.
-        alert("Please enter valid numerical values in both fields.");
+        invalidInputMessage.setAttribute("class", "invalidInputMessageTrue");
 
     } else {
 
         // Sends the output value to the displayForm2Output method in the view object.
         view.displayForm1Output((y / 100) * x);
-
+        invalidInputMessage.setAttribute("class", "invalidInputMessageFalse");
     }
 
 },
@@ -30,17 +31,19 @@ let controller = {
     // Declares variables for both incoming arguments.
     let x = valueOne;
     let y = valueTwo;
+    let invalidInputMessage = document.getElementById("formTwoErrorMessage");
 
     // Tests if either of the form submissions are valid numbers or not.
     if (isNaN(x) || isNaN(y)) {
 
         // Display an error message to the user.
-        alert("Please enter valid numerical values in both fields.");
+        invalidInputMessage.setAttribute("class", "invalidInputMessageTrue");
 
     } else {
 
         // Sends the output value to the displayForm2Output method in the view object.
         view.displayForm2Output(((x / y) * 100) + "%");
+        invalidInputMessage.setAttribute("class", "invalidInputMessageFalse");
 
         }
 
@@ -49,20 +52,22 @@ let controller = {
     // Calculates both inputs in form 3 to get an output.
     processForm3Input: function(valueOne, valueTwo) {
 
-        // Declares variables for both incoming arguments.
-        let x = valueOne;
-        let y = valueTwo;
+    // Declares variables for both incoming arguments.
+    let x = valueOne;
+    let y = valueTwo;
+    let invalidInputMessage = document.getElementById("formThreeErrorMessage");
 
-        // Tests if either of the form submissions are valid numbers or not.
-        if (isNaN(x) || isNaN(y)) {
+    // Tests if either of the form submissions are valid numbers or not.
+    if (isNaN(x) || isNaN(y)) {
     
-            // Display an error message to the user.
-            alert("Please enter valid numerical values in both fields.");
+        // Display an error message to the user.
+        invalidInputMessage.setAttribute("class", "invalidInputMessageTrue");
     
-        } else {
+    } else {
     
-            // Sends the output value to the displayForm3Output method in the view object.
-            view.displayForm3Output((((y - x) / x) * 100) + "%");
+        // Sends the output value to the displayForm3Output method in the view object.
+        view.displayForm3Output((((y - x) / x) * 100) + "%");
+        invalidInputMessage.setAttribute("class", "invalidInputMessageFalse");
     
         }
 
@@ -112,17 +117,40 @@ function init() {
 
     // Declare variable for form1 submit button and allow function to handle what happens on click.
     let form1SubmitButton = document.getElementById("whatIsPercentOfFormSubmitButton");
+
     form1SubmitButton.onclick = handleForm1SubmitButton;
+
+    // Allow for submit button be triggered on hitting the enter key.
+    document.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+        document.getElementById("whatIsPercentOfFormSubmitButton").click();
+        }
+    });
 
     // Declare variable for form2 submit button and allow function to handle what happens on click.
     let form2SubmitButton = document.getElementById("xIsWhatPercentOfYFormSubmitButton");
     form2SubmitButton.onclick = handleForm2SubmitButton;
 
+    // Allow for submit button be triggered on hitting the enter key.
+    document.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+        document.getElementById("xIsWhatPercentOfYFormSubmitButton").click();
+        }
+    });
+
     // Declare variable for form3 submit button and allow function to handle what happens on click.
     let form3SubmitButton = document.getElementById("percentIncreaseDecreaseFormSubmitButton");
     form3SubmitButton.onclick = handleForm3SubmitButton;
 
-};
+    // Allow for submit button be triggered on hitting the enter key.
+    document.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+        document.getElementById("percentIncreaseDecreaseFormSubmitButton").click();
+        }
+    });
+
+}
+
 
 // Function to take the inputs from form one and pass them on to be processed.
 function handleForm1SubmitButton() {
@@ -135,8 +163,12 @@ function handleForm1SubmitButton() {
     let firstValue = form1InputOne.value;
     let secondValue = form1InputTwo.value;
 
-    // Send both form field values to the controller object for calculation.
-    controller.processForm1Input(firstValue, secondValue);    
+    // Send both form field values to the controller object for calculation if there are true values.
+    if (firstValue && secondValue) {
+
+    controller.processForm1Input(firstValue, secondValue);  
+    
+    }
 
 };
 
@@ -151,8 +183,12 @@ function handleForm2SubmitButton() {
     let firstValue = form2InputOne.value;
     let secondValue = form2InputTwo.value;
 
-    // Send both form field values to the controller object for calculation.
+    // Send both form field values to the controller object for calculation if there are true values.
+    if (firstValue && secondValue) {
+
     controller.processForm2Input(firstValue, secondValue);
+
+    }
 
 };
 
@@ -167,8 +203,11 @@ function handleForm3SubmitButton() {
     let firstValue = form3InputOne.value;
     let secondValue = form3InputTwo.value;
 
-    // Send both form field values to the controller object for calculation.
+    // Send both form field values to the controller object for calculation if there are true values.
+    if (firstValue && secondValue) {
+
     controller.processForm3Input(firstValue, secondValue);
+    }
 
 };
 
